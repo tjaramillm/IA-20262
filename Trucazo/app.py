@@ -174,7 +174,7 @@ def compare_sentences(sentences: List[str], embedding: str, tokenizer: str = "Pa
 # =====================================================================
 # 4. IA GENERATIVA (Groq, API compatible con OpenAI)
 # =====================================================================
-GROQ_BASE_URL = "https://api.groq.com/openai/v1"
+GROQ_BASE_URL = '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'
 DEFAULT_MODEL = "openai/gpt-oss-120b"  # modelo tipo GPT; otros: llama-3.3-70b-versatile, llama-3.1-8b-instant, openai/gpt-oss-20b
 DEFAULT_SYSTEM = "Eres un asistente útil. Responde en el idioma del usuario."
 
