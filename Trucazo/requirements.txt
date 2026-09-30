@@ -1,4 +1,4 @@
-streamlit>=1.50
+streamlit>=1.40
 numpy
 pandas
 matplotlib
@@ -6,5 +6,6 @@ scikit-learn
 gensim>=4.3.3
 sentence-transformers>=3.0
 transformers>=4.44
+--extra-index-url https://download.pytorch.org/whl/cpu
 torch
 openai>=1.40
