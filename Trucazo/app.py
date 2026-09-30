@@ -144,7 +144,7 @@ EMBEDDINGS: Dict[str, Callable[[List[str], Callable], np.ndarray]] = {
     "Bag of Words": lambda s, tok: emb_bow(s, tok),
     "TF-IDF": lambda s, tok: emb_tfidf(s, tok),
     "GloVe (50d, inglés)": lambda s, tok: emb_wordvec(s, "glove-wiki-gigaword-50"),
-    "Word2Vec (Google News 300d, ~1.6 GB)": lambda s, tok: emb_wordvec(s, "word2vec-google-news-300"),
+    "GloVe (100d, inglés)": lambda s, tok: emb_wordvec(s, "glove-wiki-gigaword-100"),
     "Sentence-Transformers (multilingüe)": lambda s, tok: emb_sbert(s),
     "GPT-2 (promedio hidden states)": lambda s, tok: emb_gpt2(s),
 }
@@ -174,7 +174,7 @@ def compare_sentences(sentences: List[str], embedding: str, tokenizer: str = "Pa
 # =====================================================================
 # 4. IA GENERATIVA (Groq, API compatible con OpenAI)
 # =====================================================================
-GROQ_BASE_URL = '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'
+GROQ_BASE_URL = "https://api.groq.com/openai/v1"
 DEFAULT_MODEL = "openai/gpt-oss-120b"  # modelo tipo GPT; otros: llama-3.3-70b-versatile, llama-3.1-8b-instant, openai/gpt-oss-20b
 DEFAULT_SYSTEM = "Eres un asistente útil. Responde en el idioma del usuario."
 
@@ -239,7 +239,7 @@ def main() -> None:
                     rows = tokenize(text, sch)
                     st.subheader(sch)
                     st.metric("Nº de tokens", len(rows))
-                    st.dataframe(pd.DataFrame(rows), width="stretch")
+                    st.dataframe(pd.DataFrame(rows))
 
     # ---- Embeddings + coseno ----------------------------------------
     with tab_emb:
