@@ -1,0 +1,31 @@
+# Librerías para correr los talleres 4, 6, 7, 8 y 9
+# (versiones con las que se verificaron los notebooks, Python 3.11)
+
+# Básicas (talleres 4 y 6)
+numpy==2.4.6
+pandas==3.0.6
+scikit-learn==1.9.1
+joblib==1.6.0
+matplotlib==3.11.2
+seaborn==0.13.2
+
+# Redes neuronales con Keras (taller 7)
+tensorflow-cpu==2.21.0
+keras==3.15.1
+
+# YOLO (taller 8)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.1+cpu
+torchvision==0.29.1+cpu
+ultralytics==8.4.175
+pillow==12.3.0
+
+# Chatbot con documentos (taller 9)
+gradio==6.30.0
+openai==3.29.0
+pypdf==6.20.1
+python-dotenv==1.2.4
+
+# Jupyter
+ipykernel==7.4.0
+notebook
